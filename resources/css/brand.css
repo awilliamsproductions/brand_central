@@ -1,59 +1,79 @@
-div {
+/** Div for Review **/ 
+
+/**div {
 	border: black 1px solid; 
-}
+} 
+**/
+
+/** Universal Adjustments**/
+
 
 html, body {
- font-size: 12px; 
+ 	font-size: 12px; 
 	background-color: white; 
 	position: relative; 
 	min-height: 100%;
 }
 
-.container {
+/**.container {
 	max-width: 960px; 
 	margin: 0 auto; 
-}
-.main {
-	height: auto;
-	background-image: url("../images/ThinkstockPhotos-627045246.jpg");
-	background-size: cover;
-	background-repeat: no-repeat; 
-	background-position: center;
-	width: 100%; 
-}
+} **/
+
 .flex-container {
-	display: inline-flex; 
-	flex-flow: row wrap; 
+	display: flex; 
 	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/** Header **/ 
+
+header {
+	position: fixed;
+	z-index: 1; 
 	align-items: center;
-}
-.main img {
-	width: 15rem; 
-	display: inline-flex; 
-	margin: auto; 
-}
-
-nav {
-	background-color: teal;
 	width: 100%;
-	height: 75px; 
+	height: 68px; 
+	border-bottom: 1px solid white; 
+	background-color: teal; 
+	top: 0;
 }
 
-.main li {
+header nav {
+	float: right; 
+	text-align: right;
+	flex-grow: 3;
+}
+
+
+header nav ul li {
 	color: white;
-	text-decoration: none; 
 	list-style-type: none; 
 	display: inline-block;
-	padding: 2rem 1.75rem;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.25rem;
+	padding: 0rem 2rem;
 }
+
+header h2 {
+	padding: 0 2rem;
+	font-size: 2rem;
+}
+
 
 .logo {
 	background-image: url("../images/LM_logo_notag_white.svg"); 
-	width: auto; 
+	width: 100px; 
 	height: auto;
 	background-repeat: no-repeat;
-	overflow: hidden;
+	background-size: cover;
+	display: block; 
+	margin: auto;
 }
+
+/** Body of Website **/ 
+
 
 h2 {
 	color: white;
@@ -63,15 +83,21 @@ h2 {
 h1{
 	
 	font-size: 5rem;
+	opacity: 1;
 }
 
 .container header_img {
 	
 	display: block; 
-	flex-flow: row nowrap; 
+	flex-flow: row wrap; 
 	justify-content: center;
-	align-content: center;
 	align-items: center;
+}
+
+img {
+	width: 15rem; 
+	display: block; 
+	margin: auto; 
 }
 
 .header_img {
@@ -81,39 +107,77 @@ h1{
 	background-size: cover; 
 	width: 100%; 
 	height: 400px; 
+	display: flex; 
+	flex-flow: column nowrap;
+	justify-content: center;
 	opacity: .5; 
 	text-align: center;
 	line-height: 4px;
-}
-
-.header h1, h2 {
-	
-	opacity: 1; 
 	
 }
 
 .about {
-	width: 45%; 
+	max-width: 35%; 
+	min-width: 320px;
 	margin: 4rem 2rem;
-	padding: 10px;
+	padding: 0px 10px;
+	padding-bottom: 40px; 
+	padding-top: 20px; 
 	display: flex;
 	flex-flow: row, wrap;
-	
 }
+
+table, th, td {
+	border: 1px solid black; 
+	border-collapse: collapse; 
+}
+
+th, td { 
+	color: white; 
+	font-size: .80rem;
+	padding: 1.25rem;  
+}
+
+table {
+	background-color: skyblue;
+}
+ 
 .resource_box {
 	width: 300px;
-	height: 200px;
-	background-color: skyblue;
-
+	height: auto;
+	display: flex; 
+	justify-content: center; 
+	flex-direction: column;
 }
 
-.footer { 
+
+/** Footer to Website **/ 
+
+footer { 
 	width: 100%;
-	background-color: teal;
-	position: absolute;
+	background-color: gray;
+	padding: 60px 0px; 
 	bottom: 0;
-  margin-top: -50px;
-  /* negative value of footer height */
-  height: 50px;
-  clear: both;
+}
+
+
+footer nav {
+	float: right; 
+	text-align: right;
+	flex-grow: 3;
+}
+	
+footer nav ul li {
+	color: white; 
+	list-style-type: none; 
+	display: inline-block;
+	font-size: 1.25rem;
+	padding: 0rem 2rem;
+}
+
+footer p { 
+	color: white;
+	float: left;
+	padding: 0px 2rem;
+	font-size: 1.25rem;
 }
