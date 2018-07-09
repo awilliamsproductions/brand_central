@@ -1,9 +1,9 @@
-/** Div for Review **/ 
+/** Div for Review 
 
-/**div {
+div {
 	border: black 1px solid; 
 } 
-**/
+**/ 
 
 /** Universal Adjustments**/
 
@@ -14,26 +14,21 @@ html, body {
 	position: relative; 
 	min-height: 100%;
 }
-
-/**.container {
-	max-width: 960px; 
-	margin: 0 auto; 
-} **/
-
+ 
 .flex-container {
 	display: flex; 
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
-/** Header **/ 
+/** Navigation Header **/ 
 
 header {
 	position: fixed;
 	z-index: 1; 
 	align-items: center;
 	width: 100%;
-	height: 68px; 
+	height: auto; 
 	border-bottom: 1px solid white; 
 	background-color: teal; 
 	top: 0;
@@ -45,86 +40,149 @@ header nav {
 	flex-grow: 3;
 }
 
-
 header nav ul li {
 	color: white;
+	font-family: "Gill Sans",sans-serif;
 	list-style-type: none; 
 	display: inline-block;
 	justify-content: center;
 	align-items: center;
 	font-size: 1.25rem;
-	padding: 0rem 2rem;
+	padding: 0rem 2.5rem;
 }
 
 header h2 {
-	padding: 0 2rem;
-	font-size: 2rem;
-}
-
-
-.logo {
-	background-image: url("../images/LM_logo_notag_white.svg"); 
-	width: 100px; 
-	height: auto;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: block; 
-	margin: auto;
-}
-
-/** Body of Website **/ 
-
-
-h2 {
+	margin-top: 5%; 
+	font-size: 2.75rem;
+	font-family: gotham, sans-serif; 
 	color: white;
-	font-size: 1.25rem;
+	padding: 10px 1.25rem;
 }
 
-h1{
+@media screen and (max-width: 700px) {
 	
-	font-size: 5rem;
-	opacity: 1;
+header {
+	position: fixed;
+	z-index: 1; 
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto; 
+	border-bottom: 1px solid white; 
+	top: 0;
+	background-color: tomato; 
+	}
+	
+header nav { 
+	flex-grow: 0;
+	text-align: center;
+	margin-bottom: 20px;
+	padding: 5px 0; 
 }
-
-.container header_img {
 	
-	display: block; 
-	flex-flow: row wrap; 
+header nav ul li {
+	font-size: .85rem;
+	padding: 0 2rem;
+	display: inline-block;
 	justify-content: center;
 	align-items: center;
+	text-align: center; 
+	}
+	
+header h2 {
+	font-size: 1.90rem; 
+	justify-content: center;
+	align-items: center;
+	padding: 5% 0;  
+	}
+	
 }
-
-img {
-	width: 15rem; 
-	display: block; 
-	margin: auto; 
+@media screen and (max-width: 480px) {
+	header h2 {
+		font-size: 2.5rem;
+	}
 }
+/** Body of Website **/ 
 
-.header_img {
+.banner_img {
 	
 	background-image: url("../images/ThinkstockPhotos-613542110.jpg"); 
 	background-repeat: no-repeat; 
 	background-size: cover; 
 	width: 100%; 
-	height: 400px; 
+	height: 600px; 
 	display: flex; 
-	flex-flow: column nowrap;
+	flex-flow: column wrap;
 	justify-content: center;
 	opacity: .5; 
 	text-align: center;
-	line-height: 4px;
+}
+
+.banner_img h1 {
+	font-size: 4rem; 
+	text-transform: uppercase;
+}
+
+.banner_img h3 {
+	font-size: 1.75rem;
+	font-weight: bold; 
+}
+
+.banner_img h1, h3 {
+	color: orangered;
+	font-family: Gotham, sans-serif; 
+	text-align: center; 
+}
+
+@media screen and (max-width: 960px) {
 	
+.banner_img h1 {
+font-size: 3.25rem; 
+	}
+	
+.banner_img h3 {
+font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	
+.banner_img h1 {
+font-size: 2.75rem; 
+	}
+	
+.banner_img h3 {
+font-size: 1.125rem;
+line-height: inherit;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.banner_img h1 {
+	font-size: 1.80rem; 
+	}
+	
+	.banner_img h3 {
+	font-size: 0rem;
+	}
 }
 
 .about {
-	max-width: 35%; 
+	
+	max-width: 450px; 
 	min-width: 320px;
 	margin: 4rem 2rem;
-	padding: 0px 10px;
+	padding: 0px 2px;
 	padding-bottom: 40px; 
 	padding-top: 20px; 
 	display: flex;
 	flex-flow: row, wrap;
+}
+@media screen and (max-width: 700px) {
+	
+	.about {
+	text-align: center;
+	}
 }
 
 table, th, td {
@@ -134,32 +192,80 @@ table, th, td {
 
 th, td { 
 	color: white; 
+	text-transform: uppercase;
+	font-family: gotham, sans-serif; 
 	font-size: .80rem;
 	padding: 1.25rem;  
 }
 
 table {
-	background-color: skyblue;
+	background-color: skyblue; 
 }
  
 .resource_box {
-	width: 300px;
+	width: 200px;
 	height: auto;
 	display: flex; 
 	justify-content: center; 
 	flex-direction: column;
+	padding-bottom: 30px; 
 }
 
 
 /** Footer to Website **/ 
 
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 footer { 
 	width: 100%;
-	background-color: gray;
+	background-color: teal;
 	padding: 60px 0px; 
 	bottom: 0;
 }
 
+footer p {
+	font-family: gill sans, sans-serif;
+	margin-bottom: 40px; 
+}
+
+footer nav ul li {
+	font-family: gill sans, sans-serif; 
+}
+
+
+@media screen and (max-width: 700px) {
+	footer{
+			padding: 80px 0px; 
+			background-color: tomato;
+		}
+	footer nav {
+		float: center;
+		text-align: center;
+		flex-grow: 0;
+	}
+	footer nav ul li {
+	color: white; 
+	list-style-type: none; 
+	display: inline-block;
+	font-size: 1.25rem;
+	padding: 0rem 2rem;
+}
+	footer p { 
+	color: white;
+	float: center;
+	padding: 0px 2rem;
+	font-size: 1.25rem;
+}
+	}
 
 footer nav {
 	float: right; 
